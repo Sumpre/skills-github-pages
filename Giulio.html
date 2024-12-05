@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotbar con Pulsante</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f3f4f6;
+            overflow-y: auto;
+        }
+
+        .hotbar {
+            width: 100%;
+            max-width: 800px;
+            height: 80px; /* Aumentata l'altezza della hotbar */
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .floating-button {
+            width: 50px;
+            height: 50px;
+            background-color: #ff0000;
+            border-radius: 15px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .floating-button:hover {
+            transform: translateY(-5px);
+        }
+
+        .floating-button svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
+
+        .info-container {
+            max-width: 800px;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .info-box {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #333;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hotbar">
+        <div class="title">brickers</div>
+    </div>
+    <div class="info-container">
+        <div class="info-box">
+            <p>This channel is dedicated to bringing creative stories and animations using LEGO bricks. Each video is crafted with meticulous attention to detail, capturing the essence of storytelling through stop-motion animation.</p>
+        </div>
+        <div class="info-box">
+            <p>Creating these videos is a labor-intensive process. It involves taking numerous photos of small incremental movements of LEGO pieces, carefully piecing them together to form seamless animations that tell engaging stories.</p>
+        </div>
+        <div class="info-box">
+            <p>By clicking the button below, you can subscribe to the channel or simply explore the amazing content available. Your support helps in continuing the creation of high-quality, entertaining videos for all LEGO enthusiasts.</p>
+        </div>
+    </div>
+    <a href="https://youtube.com/@brickers6458" target="_blank" class="floating-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19.615 3.184c.927.23 1.659.96 1.888 1.888.447 1.727.497 5.328.497 5.328s0 3.601-.497 5.328c-.23.927-.961 1.658-1.888 1.888-1.727.447-7.615.447-7.615.447s-5.888 0-7.615-.447c-.927-.23-1.658-.961-1.888-1.888-.497-1.727-.497-5.328-.497-5.328s0-3.601.497-5.328c.23-.927.961-1.658 1.888-1.888 1.727-.447 7.615-.447 7.615-.447s5.888 0 7.615.447zm-10.615 4.816v6l5.5-3-5.5-3z"/>
+        </svg>
+    </a>
+</body>
+</html>
